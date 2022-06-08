@@ -2,7 +2,7 @@ export default {
   cms_manual_init: true,
   backend: {
     name: 'github',
-    repo: 'yourname/your-github-repo-name',
+    repo: 'electricdreammachine/tout-oublier',
     branch: 'main',
   },
   media_folder: 'public/img',
@@ -15,7 +15,7 @@ export default {
         {
           label: 'Home',
           name: 'home',
-          file: 'content/pages/home.md',
+          file: 'content/home.md',
           fields: [
             {
               label: 'Hero Title',
