@@ -1,0 +1,12 @@
+.header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    .graphic {
+        grid-area: 1 / 1 / 1 / span 8;
+    }
+
+    .text {
+        grid-area: 1 / 7 / 1 / span 6;
+    }
+}

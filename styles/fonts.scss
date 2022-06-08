@@ -1,0 +1,30 @@
+$fontFamilies: (
+    'Kanit': (
+        (
+            900,
+            'normal',
+            '../fonts/Kanit/Kanit-Black'
+        ),
+        (
+            600,
+            'normal',
+            '../fonts/Kanit/Kanit-Bold'
+        )
+    ),
+    'Poppins': (
+        (
+            400,
+            'normal',
+            '../fonts/Poppins/Poppins'
+        ), (
+            400,
+            'normal',
+            '../fonts/Poppins/Poppins'
+        )
+    )
+);
+
+$fonts: (
+    'heading': 'Kanit',
+    'body': 'Poppins',
+);

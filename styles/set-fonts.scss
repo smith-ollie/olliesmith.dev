@@ -1,0 +1,20 @@
+@import './fonts';
+
+@mixin setFontFamilies() {
+    @each $name, $fontFaces in $fontFamilies {
+        @each $fontWeight, $fontStyle, $fontUrl in $fontFaces {
+            @font-face {
+                font-family: $name;
+                font-style: $fontStyle;
+                font-weight: $fontWeight;
+                src: url("#{$fontUrl}.eot");
+                src: local(''),
+                    url("#{$fontUrl}.eot?#iefix") format('embedded-opentype'),
+                        url("#{$fontUrl}.woff2") format('woff2'),
+                        url("#{$fontUrl}.woff") format('woff'),
+                        url("#{$fontUrl}.ttf") format('truetype'),
+                        url("#{$fontUrl}.svg#Kanit") format('svg');
+            }
+        }
+    }
+}
