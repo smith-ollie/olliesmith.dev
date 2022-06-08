@@ -21,6 +21,7 @@ hero_description: >-
   Let's scrum in the standup, gang! If we fail fast, we can have a huddle to
   align on delivering value to the end user this sprint.
 
+  f
 
   The software industry is naughty.
 ---
