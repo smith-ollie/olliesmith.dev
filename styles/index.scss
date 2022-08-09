@@ -1,8 +1,8 @@
-@import './set-vars';
-@import './typography';
+@import "./set-vars";
+@import "./typography";
 
 @include setVars();
 
 body {
-    background-color: var(--primary-tint);
+  background-color: var(--primary-tint);
 }

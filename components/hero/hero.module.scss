@@ -1,12 +1,52 @@
 .header {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
 
-    .graphic {
-        grid-area: 1 / 1 / 1 / span 8;
-    }
+.graphicContainer {
+  grid-area: 1 / 1 / 1 / span 7;
+}
 
-    .text {
-        grid-area: 1 / 7 / 1 / span 6;
+.graphic {
+  fill: var(--secondary);
+}
+
+.screenDisplay {
+  opacity: 0.6;
+}
+
+.screen {
+  fill: var(--accent-white);
+  opacity: 0.6;
+}
+
+.screenWrapper {
+  mix-blend-mode: overlay;
+}
+
+.animatedGlow {
+  mix-blend-mode: overlay;
+  opacity: 0.6;
+}
+
+.wormholeCircle {
+  fill: none;
+  stroke: black;
+}
+
+.text {
+  grid-area: 1 / 7 / 1 / span 6;
+}
+
+.title {
+  @for $i from 1 to 3 {
+    span:nth-of-type(#{$i}) {
+      text-indent: -#{(3-$i) * 0.3}ch;
+      display: inline-block;
     }
+  }
+}
+
+.measureConstraint {
+  max-width: 65ch;
 }

@@ -1,19 +1,19 @@
-@import './colors';
+@import "./colors";
 
 @function map-collect($maps...) {
-    $collection: ();
-  
-    @each $map in $maps {
-      $collection: map-merge($collection, $map);
-    }
-    
-    @return $collection;
-};
+  $collection: ();
+
+  @each $map in $maps {
+    $collection: map-merge($collection, $map);
+  }
+
+  @return $collection;
+}
 
 @mixin setVars() {
-    :root {
-        @each $name, $value in map-collect($colors, $fonts) {
-              --#{$name}: #{$value};
-          }
+  :root {
+    @each $name, $value in map-collect($colors, $fonts) {
+      --#{$name}: #{$value};
     }
+  }
 }

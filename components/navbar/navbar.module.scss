@@ -1,0 +1,42 @@
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+
+  &:before {
+    content: "";
+    flex: 0.75;
+  }
+}
+
+.logoWordmark {
+  grid-area: 1 / 1 / 1 / span 8;
+
+  span:nth-of-type(2) {
+    text-indent: 0.5ch;
+    display: block;
+  }
+}
+
+.navContainer {
+  grid-area: 1 / 7 / 1 / span 6;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    width: calc(100% + 2ch);
+    height: 1px;
+    background: black;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
