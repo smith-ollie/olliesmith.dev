@@ -80,9 +80,9 @@ function Hero({ title, subTitle }) {
                       }}
                       style={{ originX: 0.31, originY: 0.24 }}
                       transition={{
-                        duration: 20,
+                        duration: 6,
                         ease: "easeIn",
-                        delay: index * 5,
+                        delay: index * 2,
                         repeat: Infinity,
                       }}
                     />
@@ -94,9 +94,9 @@ function Hero({ title, subTitle }) {
                       }}
                       style={{ originX: 0.31, originY: 0.24 }}
                       transition={{
-                        duration: 20,
+                        duration: 6,
                         ease: "easeIn",
-                        delay: index * 5,
+                        delay: index * 2,
                         repeat: Infinity,
                       }}
                     />
