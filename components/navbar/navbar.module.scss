@@ -8,11 +8,26 @@
   list-style: none;
   display: flex;
   padding: 0;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 2rem;
 
   &:before {
     content: "";
     flex: 0.75;
+  }
+}
+
+.navIcon {
+  height: 2rem;
+  fill: var(--accent-white);
+
+  &.house {
+    height: 1.5rem;
+  }
+
+  &.blog {
+    margin-right: -0.5rem;
   }
 }
 
