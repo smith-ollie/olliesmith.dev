@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import { Footer } from '../components/footer';
+import { Hero } from "../components/hero";
+import { Job } from '../components/job';
+import { Timeline } from '../components/timeline';
+import { Wordmark } from '../components/wordmark';
+import Layout from "../layouts/Layout.astro";
+
+import { frontmatter } from '../content/pages/index.md';
+
+const jobs = await getCollection('jobs').then((jobs) => jobs.sort((a, b) =>
+  new Date(b.data.startDate).getTime() - new Date(a.data.startDate).getTime())
+);
+---
+
+<Layout title={frontmatter.title}>
+  <div>
+    <main class="bg-primary flex flex-col justify-center items-center">
+      <div class="container pt-10 grid-rows-1 grid">
+        <div class="row-start-1 col-start-1">
+          <Wordmark value={frontmatter.wordmark} />
+        </div>
+        <div class="row-start-1 col-start-1">
+          <Hero heading={frontmatter['hero_title']} body={frontmatter['hero_subtitle']} client:load />
+        </div>
+      </div>
+      <div class="container max-w-[800px]">
+        <Timeline>
+          {jobs.map(job => <Job {...job}><div set:html={job.body.trim()}></div></Job>)}
+          </Timeline>
+      </div>
+      <Footer>lol</Footer>
+    </main>
+  </div>
+</Layout>
