@@ -1,0 +1,54 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+
+import { Job } from "../../components/timeline/job";
+import { SummarisedJobs } from "../../components/timeline/summarised-jobs";
+import { Timeline } from "../../components/timeline/timeline";
+import Typography from "../../components/typography/typography";
+
+const [featuredJobs, summarisedJobs] = await getCollection("jobs").then(
+  (jobs) =>
+    jobs
+      .sort(
+        (a, b) =>
+          new Date(b.data.startDate).getTime() -
+          new Date(a.data.startDate).getTime()
+      )
+      .reduce(
+        (acc, job) => {
+          if (
+            new Date(job.data.startDate).getTime() >
+            new Date("2017-08-13").getTime()
+          ) {
+            acc[0].push(job);
+          } else {
+            acc[1].push(job);
+          }
+          return acc;
+        },
+        [[], []] as [CollectionEntry<"jobs">[], CollectionEntry<"jobs">[]]
+      )
+);
+---
+
+<section class="container max-w-[800px] gap-8 flex flex-col">
+  <header>
+    <Typography variant="heading" size="medium" className="text-center" as="h2">
+      Experience
+    </Typography>
+  </header>
+  <Timeline withSummarisedBookend>
+    {
+      featuredJobs.map(async (job) => {
+        const { Content: JobContent } = await job.render();
+        return (
+          <Job {...job}>
+            <JobContent />
+          </Job>
+        );
+      })
+    }
+    <SummarisedJobs jobs={summarisedJobs} />
+  </Timeline>
+</section>

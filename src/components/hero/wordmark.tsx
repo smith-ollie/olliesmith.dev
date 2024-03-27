@@ -12,6 +12,7 @@ export function Wordmark(props: WordmarkProps) {
       variant="heading"
       size="medium"
       className="!leading-[2rem] font-bold"
+      as="h1"
     >
       <SelfIndentingText>
         {props.value.split(" ").map((word, index) => (

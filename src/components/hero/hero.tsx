@@ -16,7 +16,7 @@ export function Hero({ heading, body }: HeroProps) {
         </div>
         <div className="col-span-6 col-start-7 row-start-1">
           <Typography
-            as="h1"
+            as="h2"
             variant="heading"
             size="large"
             className="-ml-[1ch] font-bold"

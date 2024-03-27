@@ -10,10 +10,10 @@ export function SummarisedJobs(props: SummarisedJobsProps) {
   return (
     <div className="flex flex-col gap-8 p-3">
       <Typography variant="heading" size="small">
-        The early years
+        Earlier years
       </Typography>
       {props.jobs.map((job) => (
-        <div>
+        <div className="flex flex-col gap-2">
           <div className="flex flex-row gap-6 items-baseline">
             <Typography variant="body" size="medium" className="leading-5">
               {`${dayjs(job.data.startDate).format("MMM YYYY")} - ${
@@ -39,7 +39,7 @@ export function SummarisedJobs(props: SummarisedJobsProps) {
               {job.data.role}
             </Typography>
           </div>
-          <Typography variant="body" size="small">
+          <Typography variant="body" size="medium">
             {job.body.trim()}
           </Typography>
           <div className="flex flex-row gap-3 mt-2">

@@ -10,7 +10,7 @@ interface TimelineProps {
 
 export function Timeline(props: TimelineProps) {
   return (
-    <ul className="timeline timeline-snap-icon timeline-vertical timeline-compact ">
+    <ol className="timeline timeline-snap-icon timeline-vertical timeline-compact ">
       {props.children.map((item, index) => {
         const IconForIndex =
           index === 0
@@ -38,6 +38,6 @@ export function Timeline(props: TimelineProps) {
           </li>
         );
       })}
-    </ul>
+    </ol>
   );
 }
