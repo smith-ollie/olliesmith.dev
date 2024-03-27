@@ -5,12 +5,12 @@ const typography = cva("typography", {
   variants: {
     variant: {
       heading: ["font-Kanit"],
-      body: ["font-Poppins leading-7"],
+      body: ["font-Poppins"],
     },
     size: {
-      "x-small": [],
-      small: [],
-      medium: [],
+      "x-small": ["text-xs"],
+      small: ["text-sm"],
+      medium: ["text-base leading-7"],
       large: ["text-lg"],
     },
   },
@@ -18,7 +18,7 @@ const typography = cva("typography", {
     {
       variant: "heading",
       size: "medium",
-      className: "text-4xl",
+      className: "!text-4xl",
     },
     {
       variant: "heading",
@@ -28,12 +28,12 @@ const typography = cva("typography", {
     {
       variant: "heading",
       size: "small",
-      className: "text-2xl",
+      className: "!text-2xl",
     },
     {
       variant: "heading",
       size: "x-small",
-      className: "text-xl",
+      className: "!text-xl",
     },
   ],
   defaultVariants: {

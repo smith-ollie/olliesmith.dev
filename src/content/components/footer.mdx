@@ -1,0 +1,37 @@
+import { File } from "../../components/icons/file";
+import { Github } from "../../components/icons/github";
+import { LinkedIn } from "../../components/icons/linkedin";
+import Typography from "../../components/typography/typography";
+
+<div className="container flex flex-col items-center gap-12 p-10">
+  <div className="flex flex-col gap-6 max-w-[50ch]">
+    <Typography variant="heading" size="medium">
+      More info?
+    </Typography>
+    <Typography variant="body" size="medium" className="whitespace-nowrap">
+      I keep things pretty low-key online, the best places to find me are probably LinkedIn and GitHub.
+    </Typography>
+  </div>
+  <div className="flex flex-row gap-16 justify-center">
+    <div className="flex flex-row gap-5 justify-center">
+      <a
+        href="https://github.com/electricdreammachine"
+        >
+        <Github className="fill-primary-tint h-[40px] w-[40px] hover:fill-accent-white" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/olivermichaelsmith"
+        >
+        <LinkedIn className="fill-primary-tint h-[40px] w-[40px] hover:fill-accent-white" />
+      </a>
+    </div>
+    <a
+      href="CV_Oliver_Smith.pdf"
+      download
+      className="btn flex h-[40px] min-h-0 items-center bg-primary-tint text-secondary hover:bg-accent-white relative rounded-full border-none before:w-[30px] before:h-[30px] before:block before:absolute before:-right-[32px] before:-top-0 before:mask-[url('/pixel-sparkle-tr.svg')] before:bg-cover before:bg-no-repeat before:bg-gradient-to-r before:from-primary-tint before:to-secondary before:-scale-x-100 after:w-[35px] after:h-[30px] after:block after:absolute after:-left-[32px] after:-top-0 after:mask-[url('/pixel-sparkle-tr.svg')] after:bg-cover after:bg-no-repeat after:bg-primary-tint after:-scale-x-100 after:bg-gradient-to-l after:from-primary-tint after:to-secondary"
+    >
+      <File className="w-[20px] h-[20px]" />
+      Download CV
+    </a>
+  </div>
+</div>

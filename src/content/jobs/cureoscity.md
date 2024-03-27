@@ -10,4 +10,6 @@ tech:
   - AWS CloudFormation
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit semper est, sit amet imperdiet purus. Phasellus vel nisi id ligula feugiat efficitur vel et erat. Morbi dictum metus eu nisi elementum aliquam. Vestibulum mollis eros vitae pharetra varius. Phasellus mollis faucibus gravida. Nam suscipit venenatis mi. Quisque ut eleifend nisi, nec elementum eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ullamcorper, elit consequat laoreet placerat, leo sem euismod velit, sit amet fermentum urna turpis ac diam. Suspendisse ac metus urna.
+I had the opportunity in this role to step outside of my fintech niche and deliver building management solutions which serviced some of the most prominent commercial properties in London. This included complex delivery and visitor management, as well as a custom content management platform which allowed customers to flesh out a companion mobile app.
+
+Elements of this role were full stack, including delivering certain functionality via serverless functions, orchestrated via AWS's Serverless Application Model to seamlessly deploy functions with all of their requisite infrastructure.

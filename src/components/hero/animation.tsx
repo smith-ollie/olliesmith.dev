@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
-import ScreenGlowClippingMask from "./ClippingMask";
-import Glow from "./Glow";
-import Screen from "./Screen";
-import BaseGraphic from "./Vignette";
-import WormholeCircle from "./WormholeCircle";
-import WormholeSwoop from "./WormholeSwoop";
+import BaseGraphic from "./graphics/base";
+import Glow from "./graphics/glow";
+import Screen from "./graphics/screen";
+import WormholeCircle from "./graphics/wormhole-circle";
+import WormholeSwoop from "./graphics/wormhole-swoop";
 
 const AnimatedGlow = motion(Glow);
 const AnimatedWormholeCircle = motion(WormholeCircle);
@@ -15,7 +14,6 @@ const numWormholeCircles = 6;
 export function Animation() {
   return (
     <BaseGraphic className="fill-secondary">
-      <ScreenGlowClippingMask />
       <Screen />
       <defs>
         <clipPath id="ScreenClippingMask">

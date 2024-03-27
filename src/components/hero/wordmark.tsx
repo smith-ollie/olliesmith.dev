@@ -1,6 +1,6 @@
 import clsx from "clsx";
-import SelfIndentingText from "./self-indenting-text";
-import Typography from "./typography";
+import SelfIndentingText from "../typography/self-indenting-text";
+import Typography from "../typography/typography";
 
 interface WordmarkProps {
   value: string;
@@ -11,7 +11,7 @@ export function Wordmark(props: WordmarkProps) {
     <Typography
       variant="heading"
       size="medium"
-      className="leading-[2rem] font-bold"
+      className="!leading-[2rem] font-bold"
     >
       <SelfIndentingText>
         {props.value.split(" ").map((word, index) => (

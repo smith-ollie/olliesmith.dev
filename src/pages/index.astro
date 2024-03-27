@@ -1,36 +1,84 @@
 ---
-import { getCollection } from 'astro:content';
-import { Footer } from '../components/footer';
-import { Hero } from "../components/hero";
-import { Job } from '../components/job';
-import { Timeline } from '../components/timeline';
-import { Wordmark } from '../components/wordmark';
-import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { Footer } from "../components/footer/footer";
+import { Hero } from "../components/hero/hero";
+import { Wordmark } from "../components/hero/wordmark";
+import { Job } from "../components/timeline/job";
+import { SummarisedJobs } from "../components/timeline/summarised-jobs";
+import { Timeline } from "../components/timeline/timeline";
+import Layout from "../layouts/layout.astro";
 
-import { frontmatter } from '../content/pages/index.md';
+import type { CollectionEntry } from "astro:content";
+import Typography from "../components/typography/typography";
+import { Content as FooterContent } from "../content/components/footer.mdx";
+import { frontmatter as index } from "../content/pages/index.mdx";
 
-const jobs = await getCollection('jobs').then((jobs) => jobs.sort((a, b) =>
-  new Date(b.data.startDate).getTime() - new Date(a.data.startDate).getTime())
+const [featuredJobs, summarisedJobs] = await getCollection("jobs").then(
+  (jobs) =>
+    jobs
+      .sort(
+        (a, b) =>
+          new Date(b.data.startDate).getTime() -
+          new Date(a.data.startDate).getTime()
+      )
+      .reduce(
+        (acc, job) => {
+          if (
+            new Date(job.data.startDate).getTime() >
+            new Date("2017-08-13").getTime()
+          ) {
+            acc[0].push(job);
+          } else {
+            acc[1].push(job);
+          }
+          return acc;
+        },
+        [[], []] as [CollectionEntry<"jobs">[], CollectionEntry<"jobs">[]]
+      )
 );
 ---
 
-<Layout title={frontmatter.title}>
-  <div>
-    <main class="bg-primary flex flex-col justify-center items-center">
-      <div class="container pt-10 grid-rows-1 grid">
-        <div class="row-start-1 col-start-1">
-          <Wordmark value={frontmatter.wordmark} />
-        </div>
-        <div class="row-start-1 col-start-1">
-          <Hero heading={frontmatter['hero_title']} body={frontmatter['hero_subtitle']} client:load />
-        </div>
+<Layout title={index.title}>
+  <main
+    class="bg-primary flex flex-col justify-center items-center text-secondary"
+  >
+    <div class="container pt-10 grid-rows-1 grid">
+      <div class="row-start-1 col-start-1">
+        <Wordmark value={index.wordmark} />
       </div>
-      <div class="container max-w-[800px]">
-        <Timeline>
-          {jobs.map(job => <Job {...job}><div set:html={job.body.trim()}></div></Job>)}
-          </Timeline>
+      <div class="row-start-1 col-start-1">
+        <Hero
+          heading={index["hero_title"]}
+          body={index["hero_subtitle"]}
+          client:load
+        />
       </div>
-      <Footer>lol</Footer>
-    </main>
-  </div>
+    </div>
+    <div class="container max-w-[800px] gap-8 flex flex-col">
+      <Typography
+        variant="heading"
+        size="medium"
+        className="text-center"
+        as="h2"
+      >
+        Experience
+      </Typography>
+      <Timeline withSummarisedBookend>
+        {
+          featuredJobs.map(async (job) => {
+            const { Content: JobContent } = await job.render();
+            return (
+              <Job {...job}>
+                <JobContent />
+              </Job>
+            );
+          })
+        }
+        <SummarisedJobs jobs={summarisedJobs} />
+      </Timeline>
+    </div>
+    <Footer>
+      <FooterContent />
+    </Footer>
+  </main>
 </Layout>

@@ -1,6 +1,6 @@
+import SelfIndentingText from "../typography/self-indenting-text";
+import Typography from "../typography/typography";
 import { Animation } from "./animation";
-import SelfIndentingText from "./self-indenting-text";
-import Typography from "./typography";
 
 interface HeroProps {
   heading: React.ComponentPropsWithoutRef<typeof SelfIndentingText>["children"];
@@ -14,12 +14,12 @@ export function Hero({ heading, body }: HeroProps) {
         <div className="col-span-7 row-start-1 col-start-1">
           <Animation />
         </div>
-        <div className="col-span-5 col-start-7 row-start-1">
+        <div className="col-span-6 col-start-7 row-start-1">
           <Typography
             as="h1"
             variant="heading"
             size="large"
-            className="-ml-[2ch] font-bold"
+            className="-ml-[1ch] font-bold"
           >
             <SelfIndentingText>{heading}</SelfIndentingText>
           </Typography>

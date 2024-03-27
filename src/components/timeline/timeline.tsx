@@ -1,16 +1,23 @@
 import clsx from "clsx";
-import { Play } from "./play";
-import { Rewind } from "./rewind";
+import { Ellipsis } from "../icons/ellipsis";
+import { Play } from "../icons/play";
+import { Rewind } from "../icons/rewind";
 
 interface TimelineProps {
   children: React.ReactNode[];
+  withSummarisedBookend?: boolean;
 }
 
 export function Timeline(props: TimelineProps) {
   return (
     <ul className="timeline timeline-snap-icon timeline-vertical timeline-compact ">
       {props.children.map((item, index) => {
-        const IconForIndex = index === 0 ? Play : Rewind;
+        const IconForIndex =
+          index === 0
+            ? Play
+            : props.withSummarisedBookend && index === props.children.length - 1
+              ? Ellipsis
+              : Rewind;
 
         return (
           <li key={index}>
@@ -26,7 +33,7 @@ export function Timeline(props: TimelineProps) {
             </div>
             <div className="timeline-end mb-10">{item}</div>
             {index !== props.children.length - 1 ? (
-              <hr className="bg-primary-tint" />
+              <hr className="bg-primary-tint gradient-mask-t-20" />
             ) : null}
           </li>
         );

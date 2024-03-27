@@ -1,8 +1,9 @@
 import type { SVGProps } from "react";
 import { forwardRef, type Ref } from "react";
+
 const SvgWormholeSwoop = (
   props: SVGProps<SVGGElement>,
-  ref: Ref<SVGSVGElement>
+  ref: Ref<SVGSVGElement>,
 ) => (
   <g {...props} ref={ref}>
     <path
@@ -11,5 +12,7 @@ const SvgWormholeSwoop = (
     />
   </g>
 );
+
 const ForwardRef = forwardRef(SvgWormholeSwoop);
+
 export default ForwardRef;

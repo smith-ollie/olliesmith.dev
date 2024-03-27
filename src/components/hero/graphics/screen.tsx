@@ -1,5 +1,6 @@
 import type { SVGProps } from "react";
 import { forwardRef, type Ref } from "react";
+
 const SvgScreen = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -17,5 +18,7 @@ const SvgScreen = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
     </defs>
   </svg>
 );
+
 const ForwardRef = forwardRef(SvgScreen);
+
 export default ForwardRef;

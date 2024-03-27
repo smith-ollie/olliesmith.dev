@@ -1,9 +1,9 @@
 import type { SVGProps } from "react";
 import { forwardRef, type Ref } from "react";
 
-const SvgVignette = (
+const SvgBase = (
   { children, ...props }: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>
+  ref: Ref<SVGSVGElement>,
 ) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -64,5 +64,7 @@ const SvgVignette = (
     {children}
   </svg>
 );
-const ForwardRef = forwardRef(SvgVignette);
+
+const ForwardRef = forwardRef(SvgBase);
+
 export default ForwardRef;
