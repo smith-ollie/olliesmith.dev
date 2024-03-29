@@ -13,7 +13,7 @@ const numWormholeCircles = 6;
 
 export function Animation() {
   return (
-    <BaseGraphic className="fill-secondary">
+    <BaseGraphic className="fill-secondary w-full h-full">
       <Screen />
       <defs>
         <clipPath id="ScreenClippingMask">

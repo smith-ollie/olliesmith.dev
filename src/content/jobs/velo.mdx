@@ -15,8 +15,8 @@ import Typography from "../../components/typography/typography";
 
 This role has been varied in a way few roles are, which suits me brilliantly; alongside maintaining the UI of some live services, varied in structure from flavours of create-react-app to NextJS, I've had the opportunity to work to bring 2 new platforms to market. This has afforded me the chance to skill up in mobile development, both native (Swift) and cross-platform (React Native).
 
-<aside class="flex flex-row gap-4 bg-primary-tint p-3 rounded-xl">
-  <article class="flex flex-1 flex-col card min-w-0 overflow-hidden rounded-xl border-accent-white/50 border">
+<aside class="flex flex-col @[650px]:bg-primary-tint @[650px]:p-3 rounded-xl @[650px]:flex-row @[650px]:gap-4 items-center @[650px]:items-stretch">
+  <article class="flex flex-1 flex-col card overflow-hidden rounded-xl bg-primary-tint border-accent-white/50 border w-[60%] min-w-[300px]">
     <img
       src="vizme-feat-img.jpg"
       alt="Vizme promotional image of a cool, defiant looking man looking at the camera, with the slogan 'money that hits different'"
@@ -28,20 +28,19 @@ This role has been varied in a way few roles are, which suits me brilliantly; al
         <Typography variant="body" size="small">
           Vizme is a social platform with a mission of making payments more fun. It deep-links seamlessly with your bank to orchestrate quick payments to your contacts.
         </Typography>
-      <footer class="flex flex-row w-full justify-end max-h-10 gap-2">
+      <footer class="join join-horizontal gap-2 justify-end flex-wrap">
         <a
           href="https://apps.apple.com/gb/app/vizme/id6468962616"
-          class="contents"
+          class="block h-10"
         >
           <img
             src="app-store.svg"
             alt="Download on iOS app store promotional banner"
-            class="h-full"
           />
         </a>
         <a
           href="https://apps.apple.com/gb/app/vizme/id6468962616"
-          class="contents"
+          class="block h-10 w-auto"
         >
           <img
             src="play-store.svg"
@@ -53,7 +52,7 @@ This role has been varied in a way few roles are, which suits me brilliantly; al
     </div>
   </article>
   <hr class="bg-accent-white/50 w-[1px] border-none rounded-full !h-[unset] my-2" />
-  <article class="flex flex-1 flex-col card min-w-0 overflow-hidden rounded-xl border-accent-white/50 border">
+  <article class="flex flex-1 flex-col card overflow-hidden rounded-xl bg-primary-tint border-accent-white/50 border w-[60%] min-w-[300px]">
     <img
       src="hibanapay-feat-img.png"
       alt="HibanaPay promotional image of the slogan 'Secure fast payments'"
@@ -65,15 +64,15 @@ This role has been varied in a way few roles are, which suits me brilliantly; al
         <Typography variant="body" size="small">
           Full-featured open banking payments platform; take payments in person or with a QR code/URL.
         </Typography>
-      <footer class="flex flex-row w-full justify-end max-h-10 gap-2">
+      <footer class="flex flex-row w-full justify-end gap-2">
         <a
           href="https://apps.apple.com/gb/app/hibanapay/id6443485606"
-          class="contents"
+          class="block h-10"
         >
           <img
             src="app-store.svg"
             alt="Download on iOS app store promotional banner"
-            class="h-full"
+            className="h-full"
           />
         </a>
       </footer>

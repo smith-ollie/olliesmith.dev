@@ -23,7 +23,7 @@ const typography = cva("typography", {
     {
       variant: "heading",
       size: "large",
-      className: "!text-6xl",
+      className: "xl:!text-6xl md:!text-5xl !text-4xl",
     },
     {
       variant: "heading",

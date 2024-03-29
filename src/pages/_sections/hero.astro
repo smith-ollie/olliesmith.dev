@@ -5,8 +5,10 @@ import { Wordmark } from "../../components/hero/wordmark";
 import { frontmatter as page } from "../../content/pages/index.mdx";
 ---
 
-<header class="container pt-10 grid-rows-1 grid">
-  <div class="row-start-1 col-start-1">
+<header
+  class="container pt-6 grid-rows-1 @[1000px]:grid @[1000px]:pt-10 @[1000px]:px-5 flex flex-col px-1"
+>
+  <div class="row-start-1 col-start-1 ml-5 @[800px]:ml-0">
     <Wordmark value={page.wordmark} />
   </div>
   <div class="row-start-1 col-start-1">

@@ -14,14 +14,7 @@ export function SummarisedJobs(props: SummarisedJobsProps) {
       </Typography>
       {props.jobs.map((job) => (
         <div className="flex flex-col gap-2">
-          <div className="flex flex-row gap-6 items-baseline">
-            <Typography variant="body" size="medium" className="leading-5">
-              {`${dayjs(job.data.startDate).format("MMM YYYY")} - ${
-                job.data.endDate
-                  ? dayjs(job.data.endDate).format("MMM YYYY")
-                  : "Present"
-              }`}
-            </Typography>
+          <div className="flex flex-col @[700px]:flex-row gap-0 @[700px]:gap-6 items-baseline">
             <Typography
               variant="heading"
               size="x-small"
@@ -37,6 +30,13 @@ export function SummarisedJobs(props: SummarisedJobsProps) {
               className="font-medium"
             >
               {job.data.role}
+            </Typography>
+            <Typography variant="body" size="medium" className="leading-5">
+              {`${dayjs(job.data.startDate).format("MMM YYYY")} - ${
+                job.data.endDate
+                  ? dayjs(job.data.endDate).format("MMM YYYY")
+                  : "Present"
+              }`}
             </Typography>
           </div>
           <Typography variant="body" size="medium">

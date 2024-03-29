@@ -42,5 +42,6 @@ export default {
     require("daisyui"),
     require("tailwind-gradient-mask-image"),
     require("@pyncz/tailwind-mask-image"),
+    require("@tailwindcss/container-queries"),
   ],
 };
