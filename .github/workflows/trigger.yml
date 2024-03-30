@@ -2,6 +2,8 @@ name: Trigger User Site rebuild
 
 on:
   workflow_dispatch:
+  push:
+    branches: ["main"]
 
 jobs:
   trigger:
