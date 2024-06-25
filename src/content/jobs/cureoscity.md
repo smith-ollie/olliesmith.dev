@@ -10,6 +10,6 @@ tech:
   - AWS CloudFormation
 ---
 
-I had the opportunity in this role to step outside of my fintech niche and deliver building management solutions which serviced some of the most prominent commercial properties in London. This included complex delivery and visitor management, as well as a custom content management platform which allowed customers to flesh out a companion mobile app.
+This role offered a refreshing change of pace – the chance to step outside the fintech world and build solutions for some of London's most prestigious commercial properties. It involved complex visitor and delivery management systems, and a custom content management platform that empowered clients to manage companion mobile apps.
 
-Elements of this role were full stack, including delivering certain functionality via serverless functions, orchestrated via AWS's Serverless Application Model to seamlessly deploy functions with all of their requisite infrastructure.
+The role also demanded full-stack skills. I delivered specific functionalities through serverless functions, utilizing AWS's Serverless Application Model for seamless deployment with all the necessary infrastructure in place.

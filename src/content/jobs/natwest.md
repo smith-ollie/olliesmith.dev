@@ -10,10 +10,10 @@ tech:
   - Java Spring
 ---
 
-One of my more formative career experiences, this role was all about scale; I got to work on a bigger platform than ever before, with more people across more teams. The stakes felt higher than I'd known before - I was building software (Bankline) that people relied on directly to carry out their jobs on a daily basis.
+This role was a truly formative experience for my career. It involved working on a much larger platform than ever before, collaborating with a wider range of people across multiple teams. The stakes were higher – I was building software (Bankline) that people relied on daily to perform their jobs. This instilled a real sense of responsibility  and the importance of the work.
 
-I championed accessibility within that platform, liaising with a third party agency to audit and remedy areas of concern. I found this dimension to be some of the most interesting work with how much it broadened my horizons, beyond just the technical detail.
+I championed accessibility within the platform, working with a third-party agency to identify and address any usability concerns. This aspect of the role proved to be incredibly enriching, expanding my perspective beyond the purely technical aspects.
 
-It also afforded me a chance to wade in and work on Java micro-services, which exposed me to design patterns and standards beyond the client application ones I was familiar with.
+Additionally, I had the opportunity to dive into Java micro-services, exposing me to design patterns and standards far exceeding the client-side experience I was generally familiar with.
 
-By the end of my tenure with the group, I was in a senior position contibuting to technical design across the platform, with personal accountability for particular areas.
+By the end of my time there, I had progressed to a senior position, contributing to the platform's technical design with ownership of nominated areas.
