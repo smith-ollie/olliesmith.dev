@@ -10,7 +10,7 @@ export default {
         primary: "#F26A8D",
         secondary: "#1f2937",
         "accent-hue": "#97E5EF",
-        "accent-white": "#F0EFF4",
+        "accent-white": "#FDFDFD",
       },
     },
     fontFamily: {
@@ -22,6 +22,10 @@ export default {
       shimmer: {
         "0%": { backgroundPosition: "0 0" },
         "100%": { backgroundPosition: "0 100%" },
+      },
+      "diagonal-shimmer": {
+        "0%": { backgroundPosition: "0 0" },
+        "100%": { backgroundPosition: "-100% 100%" },
       },
     },
   },

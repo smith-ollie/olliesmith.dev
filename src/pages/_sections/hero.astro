@@ -6,16 +6,22 @@ import { frontmatter as page } from "../../content/pages/index.mdx";
 ---
 
 <header
-  class="container pt-6 grid-rows-1 @[1000px]:grid @[1000px]:pt-10 @[1000px]:px-5 flex flex-col px-1"
+  class="container pt-3 @[1000px]:pt-8 @[1000px]:px-5 flex flex-col min-h-screen"
 >
-  <div class="row-start-1 col-start-1 ml-5 @[800px]:ml-0">
-    <Wordmark value={page.wordmark} />
-  </div>
-  <div class="row-start-1 col-start-1">
+  <div class="min-h-[calc(100vh-theme(spacing.4))] flex flex-col">
+    <div
+      class="pl-5 relative pt-3 @[800px]:pl-10 pb-5 before:contrast-[6] before:gradient-mask-t-0 before:absolute before:left-0 before:top-0 before:right-0 before:bottom-0 before:bg-[radial-gradient(var(--tw-gradient-stops))] before:bg-repeat-round before:bg-left-top before:bg-[size:1em_1em] before:from-primary before:opacity-50 before:to-accent-white before:animate-[shimmer_30s_linear_infinite]"
+    >
+      <Wordmark value={page.wordmark} />
+    </div>
     <HeroComponent
       heading={page["hero_title"]}
       body={page["hero_subtitle"]}
       client:load
     />
+  </div>
+  <div
+    class="relative pt-10 @[800px]:pl-10 pb-5 before:contrast-[6] before:gradient-mask-b-0 before:absolute before:left-0 before:top-0 before:right-0 before:bottom-0 before:bg-[radial-gradient(var(--tw-gradient-stops))] before:bg-repeat-round before:bg-left-top before:bg-[size:1em_1em] before:from-primary before:opacity-50 before:to-accent-white before:animate-[shimmer_30s_linear_infinite]"
+  >
   </div>
 </header>

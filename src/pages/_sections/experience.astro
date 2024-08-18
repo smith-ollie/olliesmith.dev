@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 
+import { File } from "../../components/icons/file";
 import { Job } from "../../components/timeline/job";
 import { SummarisedJobs } from "../../components/timeline/summarised-jobs";
 import { Timeline } from "../../components/timeline/timeline";
@@ -32,23 +33,52 @@ const [featuredJobs, summarisedJobs] = await getCollection("jobs").then(
 );
 ---
 
-<section class="container max-w-[800px] gap-8 flex flex-col p-1 @[650px]:p-3">
-  <header>
-    <Typography variant="heading" size="medium" className="text-center" as="h2">
-      Experience
-    </Typography>
-  </header>
-  <Timeline withSummarisedBookend>
-    {
-      featuredJobs.map(async (job) => {
-        const { Content: JobContent } = await job.render();
-        return (
-          <Job {...job}>
-            <JobContent />
-          </Job>
-        );
-      })
-    }
-    <SummarisedJobs jobs={summarisedJobs} />
-  </Timeline>
+<section
+  class="container grid grid-cols-1 @[1050px]:grid-cols-[2fr_1fr] items-start p-1 @[650px]:py-3 @[1050px]:px-16 px-8"
+>
+  <div class="flex flex-col gap-8">
+    <header>
+      <Typography variant="heading" size="medium" className="font-bold" as="h2">
+        Experience
+      </Typography>
+    </header>
+    <div class="max-w-[75ch] w-full">
+      <Timeline withSummarisedBookend>
+        {
+          featuredJobs.map(async (job) => {
+            const { Content: JobContent } = await job.render();
+            return (
+              <Job {...job}>
+                <JobContent />
+              </Job>
+            );
+          })
+        }
+        <SummarisedJobs jobs={summarisedJobs} />
+      </Timeline>
+    </div>
+  </div>
+  <aside class="sticky top-10">
+    <div class="border-[1px] p-8 border-secondary flex flex-col gap-4">
+      <Typography className="text-center">
+        A detailed PDF version of my CV is available here:
+      </Typography>
+      <div class="flex flex-col">
+        <a
+          href="CV_Oliver_Smith.pdf"
+          download="Oliver_Smith_CV.pdf"
+          class="btn inline-flex h-[40px] min-h-0 items-center self-center bg-accent-hue text-secondary hover:bg-accent-white rounded-full border-none"
+        >
+          <File className="w-[20px] h-[20px]" />
+          <Typography variant="body" size="small" className="font-normal">
+            Download CV
+          </Typography>
+        </a>
+      </div>
+    </div>
+    <div
+      class="relative pt-10 @[800px]:pl-10 pb-5 before:contrast-[6] before:gradient-mask-b-0 before:absolute before:left-0 before:top-0 before:right-0 before:bottom-0 before:bg-[radial-gradient(var(--tw-gradient-stops))] before:bg-repeat-round before:bg-left-top before:bg-[size:1em_1em] before:from-primary hue-rotate-[238deg] saturate-[0.25] contrast-[7] before:opacity-50 before:to-accent-white before:animate-[shimmer_30s_linear_infinite]"
+    >
+    </div>
+  </aside>
 </section>

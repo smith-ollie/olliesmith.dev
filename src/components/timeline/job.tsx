@@ -10,7 +10,7 @@ export function Job(props: JobProps) {
       as="div"
       variant="body"
       size="medium"
-      className="flex flex-col gap-7 p-3"
+      className="flex flex-col gap-7 @[650px]:p-3"
     >
       <Typography variant="heading" size="small">
         {props.data.company}
@@ -30,7 +30,7 @@ export function Job(props: JobProps) {
         </div>
         <div className="flex flex-row flex-wrap justify-start items-start flex-1 gap-x-4 gap-y-2">
           {props.data.tech.map((tech) => (
-            <span className="badge badge-secondary bg-primary-tint py-3 px-4">
+            <span className="badge py-3 px-4">
               <Typography
                 variant="body"
                 size="x-small"

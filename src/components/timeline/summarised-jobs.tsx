@@ -8,7 +8,7 @@ interface SummarisedJobsProps {
 
 export function SummarisedJobs(props: SummarisedJobsProps) {
   return (
-    <div className="flex flex-col gap-8 p-3">
+    <div className="flex flex-col gap-8 @[650px]:p-3">
       <Typography variant="heading" size="small">
         Earlier years
       </Typography>
@@ -44,7 +44,7 @@ export function SummarisedJobs(props: SummarisedJobsProps) {
           </Typography>
           <div className="flex flex-row gap-3 mt-2">
             {job.data.tech.map((tech) => (
-              <span className="badge badge-secondary bg-primary-tint p-3">
+              <span className="badge p-3">
                 <Typography
                   variant="body"
                   size="x-small"
