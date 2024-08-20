@@ -10,10 +10,8 @@ tech:
   - Java Spring
 ---
 
-This role was a truly formative experience for my career. It involved working on a much larger platform than ever before, collaborating with a wider range of people across multiple teams. The stakes were higher – I was building software (Bankline) that people relied on daily to perform their jobs. This instilled a real sense of responsibility  and the importance of the work.
+This was a formative experience, working on an important high-throughput commercial banking platform. The work centred on replacing the legacy platform with a suite of modern counterparts; replicating and augmenting the functionality of a monolithic Java application a suite of micro frontends and microservices. I worked on both, specialising in the frontend.
 
-I championed accessibility within the platform, working with a third-party agency to identify and address any usability concerns. This aspect of the role proved to be incredibly enriching, expanding my perspective beyond the purely technical aspects.
+There was also, unsurprisingly, a lot of regulatory change occurring within the platform: Open Banking, PSD2, Strong Customer Authentication, and Confirmation of Payee all required implementation during my time with the group. Some of these I implemented, others I assisted in the high-level solution design of.
 
-Additionally, I had the opportunity to dive into Java micro-services, exposing me to design patterns and standards far exceeding the client-side experience I was generally familiar with.
-
-By the end of my time there, I had progressed to a senior position, contributing to the platform's technical design with ownership of nominated areas.
+My favourite element of the role was being able to take accountability for accessibility within certain areas of the application while pursuing WCAG AA compliance; this involved routine auditing of the application, collaborating with specialists to implement solutions to issues, and ultimately becoming part of founding cohort of a business-wide Community of Practice.

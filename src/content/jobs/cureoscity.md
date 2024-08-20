@@ -10,6 +10,6 @@ tech:
   - AWS CloudFormation
 ---
 
-This role offered a refreshing change of pace – the chance to step outside the fintech world and build solutions for some of London's most prestigious commercial properties. It involved complex visitor and delivery management systems, and a custom content management platform that empowered clients to manage companion mobile apps.
+This role offered a unique opportunity to work on a SaaS platform that facilitated the smooth operation of real-world brick-and-mortar commercial real estate. I implemented complex visitor and delivery management systems in a white-labeled portal, as well as a bespoke content management platform that allowed clients to launch and manage mobile apps for their premises.
 
-The role also demanded full-stack skills. I delivered specific functionalities through serverless functions, utilizing AWS's Serverless Application Model for seamless deployment with all the necessary infrastructure in place.
+In addition to refining the portal UI, I worked in a full-stack capacity, delivering functionalities through serverless functions and utilizing AWS's Serverless Application Model to orchestrate CloudFormation deployments with all necessary infrastructure.
