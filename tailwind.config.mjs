@@ -10,7 +10,7 @@ export default {
         primary: "#F26A8D",
         secondary: "#1f2937",
         "accent-hue": "#97E5EF",
-        "accent-white": "#FDFDFD",
+        "accent-white": "#FEFEFE",
       },
     },
     fontFamily: {

@@ -1,0 +1,47 @@
+---
+import { Github } from "./icons/github";
+import { LinkedIn } from "./icons/linkedin";
+import Typography from "./typography/typography";
+---
+
+<footer class="footer footer-center gap-0 text-accent-hue container">
+  <div
+    class="min-h-[10vh] w-full relative top-[1px] before:absolute before:left-0 before:top-0 before:right-0 before:bottom-0 gradient-mask-t-0"
+  >
+    <div
+      class="hue-rotate-[238deg] saturate-[0.25] contrast-[7] place-self-stretch efore:contrast-[6] before:gradient-mask-t-0 before:absolute before:left-0 before:top-0 before:right-0 before:bottom-0 before:bg-[radial-gradient(var(--tw-gradient-stops))] before:bg-repeat-round before:bg-left-top before:bg-[size:1em_1em] before:from-primary before:opacity-50 before:to-accent-white before:animate-[shimmer_30s_linear_infinite]"
+    >
+    </div>
+  </div>
+  <div class="min-h-[35vh] bg-secondary w-full">
+    <div
+      class="container flex flex-row justify-between items-center text-left gap-6 pt-14 pb-16 @[1000px]:px-16 px-8"
+    >
+      <div class="flex flex-col gap-6 max-w-[50ch]">
+        <Typography variant="heading" size="medium" as="h2">
+          Contact?
+        </Typography>
+        <Typography variant="body" size="medium" className="whitespace-nowrap">
+          {
+            "I keep things pretty low-key online, the best places to find me are LinkedIn and GitHub."
+          }
+        </Typography>
+        <div class="flex flex-col @[400px]:flex-row gap-6 @[400px]:gap-4">
+          <a href="https://github.com/smith-ollie">
+            <Github
+              className="fill-accent-hue h-[40px] w-[40px] hover:fill-accent-white"
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/olivermichaelsmith">
+            <LinkedIn
+              className="fill-accent-hue h-[40px] w-[40px] hover:fill-accent-white"
+            />
+          </a>
+        </div>
+      </div>
+      <div>
+        <img src="/alien.gif" />
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,29 @@
+---
+import { frontmatter as page } from "../content/pages/index.mdx";
+import Nav from "./nav.astro";
+import Wordmark from "./wordmark.astro";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div class="flex flex-col w-full container justify-start">
+  <div
+    class="px-5 relative pt-3 @[800px]:px-16 pb-5 flex justify-between items-end before:-z-10 before:contrast-[9] before:gradient-mask-t-0 before:absolute before:left-0 before:top-0 before:right-0 before:bottom-0 before:bg-[radial-gradient(var(--tw-gradient-stops))] before:bg-repeat-round before:bg-left-top before:bg-[size:1em_1em] before:from-primary before:opacity-50 before:to-accent-white before:animate-[shimmer_30s_linear_infinite]"
+  >
+    <Wordmark value={page.wordmark} />
+    <Nav />
+  </div>
+  <div
+    class:list={["hero bg-primary  relative flex-1 min-h-[60vh]", className]}
+  >
+    <slot />
+  </div>
+  <div
+    class="relative pt-10 @[800px]:pl-10 pb-5 before:contrast-[9] before:gradient-mask-b-0 before:absolute before:left-0 before:top-0 before:right-0 before:bottom-0 before:bg-[radial-gradient(var(--tw-gradient-stops))] before:bg-repeat-round before:bg-left-top before:bg-[size:1em_1em] before:from-primary before:opacity-50 before:to-accent-white before:animate-[shimmer_30s_linear_infinite]"
+  >
+  </div>
+</div>

@@ -1,11 +1,19 @@
 import clsx from "clsx";
 
 interface SelfIndentingTextProps {
-  children: React.ReactNode[];
+  children?: React.ReactNode[];
+  "set:html"?: any;
 }
 
 function SelfIndentingText(props: SelfIndentingTextProps) {
-  return props.children.map((word, index) => (
+  const words =
+    Array.isArray(props.children) &&
+    props.children.length === 1 &&
+    typeof props.children[0] === "string"
+      ? props.children[0].split(",").map((word) => word.trim())
+      : props.children;
+
+  return words?.map((word, index) => (
     <span
       key={index}
       className={clsx("block", {

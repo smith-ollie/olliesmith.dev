@@ -15,6 +15,16 @@ const jobsCollection = defineCollection({
   }),
 });
 
+export const projectsCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    url: z.string().url(),
+    clickthrough: z.string().url(),
+    date: z.date(),
+  }),
+});
+
 export const collections = {
   jobs: jobsCollection,
 };

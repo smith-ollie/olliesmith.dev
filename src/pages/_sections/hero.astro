@@ -1,27 +1,29 @@
 ---
-import { Hero as HeroComponent } from "../../components/hero/hero";
-import { Wordmark } from "../../components/hero/wordmark";
+import { Animation } from "../../components/hero-animation/animation";
+import HeroWrapper from "../../components/hero-wrapper.astro";
+import SelfIndentingText from "../../components/typography/self-indenting-text";
+import Typography from "../../components/typography/typography";
 
 import { frontmatter as page } from "../../content/pages/index.mdx";
 ---
 
-<header
-  class="container pt-3 @[1000px]:pt-8 @[1000px]:px-5 flex flex-col justify-center min-h-screen"
->
-  <div class="flex flex-col">
-    <div
-      class="pl-5 relative pt-3 @[800px]:pl-10 pb-5 before:contrast-[9] before:gradient-mask-t-0 before:absolute before:left-0 before:top-0 before:right-0 before:bottom-0 before:bg-[radial-gradient(var(--tw-gradient-stops))] before:bg-repeat-round before:bg-left-top before:bg-[size:1em_1em] before:from-primary before:opacity-50 before:to-accent-white before:animate-[shimmer_30s_linear_infinite]"
-    >
-      <Wordmark value={page.wordmark} />
-    </div>
-    <HeroComponent
-      heading={page["hero_title"]}
-      body={page["hero_subtitle"]}
-      client:load
-    />
-  </div>
+<HeroWrapper>
   <div
-    class="relative pt-10 @[800px]:pl-10 pb-5 before:contrast-[9] before:gradient-mask-b-0 before:absolute before:left-0 before:top-0 before:right-0 before:bottom-0 before:bg-[radial-gradient(var(--tw-gradient-stops))] before:bg-repeat-round before:bg-left-top before:bg-[size:1em_1em] before:from-primary before:opacity-50 before:to-accent-white before:animate-[shimmer_30s_linear_infinite]"
+    class="hero-content lg:grid grid-cols-12 flex-col px-5 @[1000px]:px-16 pt-10 pb-14"
   >
+    <div class="col-span-6 row-start-1 col-start-1 w-3/4 @[1000px]:w-full py-5">
+      <Animation client:load />
+    </div>
+    <div class="col-span-6 col-start-7 row-start-1">
+      <Typography
+        as="h2"
+        variant="heading"
+        size="large"
+        className="@[1000px]:-ml-[1ch] font-bold text-left @[1000px]:text-left [filter:brightness(0)_saturate(100%)_invert(10%)_sepia(14%)_saturate(1963%)_hue-rotate(176deg)_brightness(93%)_contrast(85%)]"
+      >
+        <SelfIndentingText set:html={page["hero_title"].join(",")} />
+      </Typography>
+      <Typography as="p" className="py-6" set:html={page["hero_subtitle"]} />
+    </div>
   </div>
-</header>
+</HeroWrapper>

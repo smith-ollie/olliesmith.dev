@@ -1,0 +1,41 @@
+---
+import MenuOutlined from "./icons/menu-outlined";
+import Typography from "./typography/typography";
+
+const menuId = crypto.randomUUID();
+---
+
+<nav>
+  <input type="checkbox" class="peer hidden" id={menuId} />
+  <label for={menuId} class="z-20 relative @[1000px]:hidden">
+    <MenuOutlined className="size-10 relative z-[inherit] cursor-pointer" />
+  </label>
+  <ul
+    class="relative z-10 gap-8 @[1000px]:bg-accent-white/50 @[1000px]:pt-2 @[1000px]:flex @[1000px]:flex-row bg-primary-tint hidden peer-checked:flex peer-checked:fixed inset-0 flex-col pointer-events-auto pt-20 px-10"
+  >
+    <li>
+      <a href="/">
+        <Typography
+          variant="heading"
+          size="small"
+          className="[filter:brightness(0)_saturate(100%)_invert(10%)_sepia(14%)_saturate(1963%)_hue-rotate(176deg)_brightness(93%)_contrast(85%)] gap-2 flex items-center"
+        >
+          <span class="text-sm">🔻</span>
+          <span>Home</span>
+        </Typography>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <Typography
+          variant="heading"
+          size="small"
+          className="[filter:brightness(0)_saturate(100%)_invert(10%)_sepia(14%)_saturate(1963%)_hue-rotate(176deg)_brightness(93%)_contrast(85%)] gap-2 flex items-center"
+        >
+          <span class="text-sm">📌</span>
+          <span>Projects</span>
+        </Typography>
+      </a>
+    </li>
+  </ul>
+</nav>

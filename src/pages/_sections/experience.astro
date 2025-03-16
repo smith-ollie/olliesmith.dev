@@ -3,7 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 
 import { File } from "../../components/icons/file";
-import { Job } from "../../components/timeline/job";
+import Job from "../../components/timeline/job.astro";
 import { SummarisedJobs } from "../../components/timeline/summarised-jobs";
 import { Timeline } from "../../components/timeline/timeline";
 import Typography from "../../components/typography/typography";
@@ -34,10 +34,10 @@ const [featuredJobs, summarisedJobs] = await getCollection("jobs").then(
 ---
 
 <section
-  class="container grid grid-cols-1 @[1050px]:grid-cols-[2fr_1fr] items-start p-1 @[650px]:py-3 @[1050px]:px-16 px-8"
+  class="container grid grid-cols-1 @[1050px]:grid-cols-[2fr_1fr] items-start p-1 @[650px]:py-3 px-8"
 >
-  <div class="flex flex-col gap-8">
-    <header>
+  <div class="flex flex-col gap-6">
+    <header class="@[1050px]:px-8">
       <Typography variant="heading" size="medium" className="font-bold" as="h2">
         Experience
       </Typography>
