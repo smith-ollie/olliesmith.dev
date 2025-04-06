@@ -1,5 +1,4 @@
 ---
-import React from "react";
 import Layout from "../../layouts/layout.astro";
 
 import Footer from "../../components/footer.astro";
@@ -18,16 +17,14 @@ const projects = await getCollection("projects").then((projects) =>
 
 <Layout title="Projects">
   <Page>
-    {
-      projects.map((project, index) => {
-        const Wrapper = index === 0 ? HeroWrapper : React.Fragment;
-        return (
-          <Wrapper>
-            <Project project={project} invert={index % 2 !== 0} />
-          </Wrapper>
-        );
-      })
-    }
+    <HeroWrapper />
+    <div class="py-5">
+      {
+        projects.map((project, index) => {
+          return <Project project={project} />;
+        })
+      }
+    </div>
     <Footer />
   </Page>
 </Layout>

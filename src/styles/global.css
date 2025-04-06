@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@plugin "tailwind-gradient-mask-image";
+@plugin "daisyui" {
+  themes: personal --default;
+}
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+
+  --color-primary: #f26a8d;
+  --color-secondary: #1f2937;
+}
+
+@theme {
+  --color-primary-tint: #f288b2;
+  --color-primary: #f26a8d;
+  --color-secondary: #1f2937;
+  --color-accent-hue: #97e5ef;
+  --color-accent-white: #fefefe;
+
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-Kanit: "Kanit", ui-sans-serif, system-ui, sans-serif;
+  --font-Poppins: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  @keyframes shimmer {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 100%;
+    }
+  }
+}

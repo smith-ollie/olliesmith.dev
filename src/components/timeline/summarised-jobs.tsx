@@ -13,7 +13,7 @@ export function SummarisedJobs(props: SummarisedJobsProps) {
         Earlier years
       </Typography>
       {props.jobs.map((job) => (
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2" key={job.id}>
           <div className="flex flex-col @[700px]:flex-row gap-0 @[700px]:gap-6 items-baseline">
             <Typography
               variant="heading"
@@ -44,7 +44,10 @@ export function SummarisedJobs(props: SummarisedJobsProps) {
           </Typography>
           <div className="flex flex-row gap-3 mt-2">
             {job.data.tech.map((tech) => (
-              <span className="badge p-3">
+              <span
+                className="badge badge-outline badge-secondary p-3"
+                key={tech.toLowerCase()}
+              >
                 <Typography
                   variant="body"
                   size="x-small"

@@ -10,7 +10,7 @@ tech:
   - Java Spring
 ---
 
-This was a formative experience, working on an important high-throughput commercial banking platform. The work centred on replacing the legacy platform with a suite of modern counterparts; replicating and augmenting the functionality of a monolithic Java application a suite of micro frontends and microservices. I worked on both, specialising in the frontend.
+This was a formative career experience, working on an important high-throughput commercial banking platform. The work centred on replacing the legacy platform with a suite of modern counterparts; replicating and augmenting the functionality of a monolithic Java application a suite of micro frontends and microservices. I worked on both, specialising in the frontend.
 
 There was also, unsurprisingly, a lot of regulatory change occurring within the platform: Open Banking, PSD2, Strong Customer Authentication, and Confirmation of Payee all required implementation during my time with the group. Some of these I implemented, others I assisted in the high-level solution design of.
 

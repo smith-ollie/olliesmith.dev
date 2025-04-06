@@ -14,7 +14,9 @@ const { project, invert } = Astro.props;
 const { Content } = await project.render();
 ---
 
-<article class="size-full flex flex-col @[1000px]:grid grid-cols-2" ,>
+<article
+  class="project border-b-5 border-secondary size-full flex flex-col @[1000px]:grid grid-cols-3 [&+.project]:mt-10"
+>
   <iframe
     src={project.data.url}
     scrolling="no"
@@ -22,11 +24,13 @@ const { Content } = await project.render();
       "size-full overflow-hidden aspect-square",
       invert ? "@[1000px]:order-1" : "",
     ]}></iframe>
-  <div class="flex flex-col justify-center gap-8 p-16 pt-8">
+  <div class="flex flex-col justify-center gap-8 p-16 pt-8 col-span-2 w-full">
     <Typography variant="heading" size="medium" as="h2">
       {project.data.title}
     </Typography>
-    <Typography variant="body" size="medium"><Content /></Typography>
+    <Typography variant="body" size="medium" className="max-w-[60ch]"
+      ><Content /></Typography
+    >
     <div class="flex gap-6">
       <a href={project.data.clickthrough}>
         <Github
