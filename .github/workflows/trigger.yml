@@ -19,10 +19,8 @@ jobs:
 
           gh api \
             --method POST \
-            -H "Accept: application/vnd.github+json" \
-            -H "X-GitHub-Api-Version: 2022-11-28" \
-            /repos/$repo_owner/$repo_name/dispatches \
-            -f event_type="$event_type" \
-            -f client_payload='{"service":"'$service'","version":"'$version'","unit":false,"integration":true}'
+            -H "Accept: application/vnd.github.v3+json" \
+            /repos/smith-ollie/smith-ollie.github.io/dispatches \
+            -f event_type='trigger-workflow'
         env:
           GH_TOKEN: ${{ secrets.PAT }}
