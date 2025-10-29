@@ -12,11 +12,6 @@ jobs:
     steps:
       - name: Trigger Workflow in Another Repository
         run: |
-          # Set the required variables
-          repo_owner="smith-ollie" 
-          repo_name="smith-ollie.github.io"  
-          event_type="trigger-workflow"
-
           gh api \
             --method POST \
             -H "Accept: application/vnd.github.v3+json" \
