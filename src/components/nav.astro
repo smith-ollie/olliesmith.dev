@@ -1,6 +1,8 @@
 ---
 import MenuOutlined from "./icons/menu-outlined";
+import HomeIcon from "./icons/home";
 import Typography from "./typography/typography";
+import { Experiment } from "./icons/experiment";
 
 const menuId = crypto.randomUUID();
 ---
@@ -11,29 +13,29 @@ const menuId = crypto.randomUUID();
     <MenuOutlined className="size-10 relative z-[inherit] cursor-pointer" />
   </label>
   <ul
-    class="relative z-10 gap-8 @[1000px]:pt-0 @[1000px]:flex @[1000px]:flex-row hidden peer-checked:flex peer-checked:fixed inset-0 flex-col pointer-events-auto pb-1 px-10 bg-primary pt-15"
+    class="relative z-10 gap-8 @[1000px]:pt-3 @[1000px]:flex @[1000px]:flex-row hidden peer-checked:flex peer-checked:fixed inset-0 flex-col pointer-events-auto pb-1 px-10 bg-primary pt-15"
   >
     <li>
       <a href="/">
         <Typography
           variant="heading"
           size="small"
-          className="[filter:brightness(0)_saturate(100%)_invert(10%)_sepia(14%)_saturate(1963%)_hue-rotate(176deg)_brightness(93%)_contrast(85%)] gap-2 flex items-center"
+          className="[filter:brightness(0)_saturate(100%)_invert(10%)_sepia(14%)_saturate(1963%)_hue-rotate(176deg)_brightness(93%)_contrast(85%)] gap-2 flex items-start"
         >
-          <span class="text-sm">🔻</span>
+          <HomeIcon className="size-10" />
           <span>Home</span>
         </Typography>
       </a>
     </li>
     <li>
-      <a href="/projects">
+      <a href="/experiments">
         <Typography
           variant="heading"
           size="small"
-          className="[filter:brightness(0)_saturate(100%)_invert(10%)_sepia(14%)_saturate(1963%)_hue-rotate(176deg)_brightness(93%)_contrast(85%)] gap-2 flex items-center"
+          className="[filter:brightness(0)_saturate(100%)_invert(10%)_sepia(14%)_saturate(1963%)_hue-rotate(176deg)_brightness(93%)_contrast(85%)] gap-2 flex items-start"
         >
-          <span class="text-sm">📌</span>
-          <span>Projects</span>
+          <Experiment className="size-10" />
+          <span>Experiments</span>
         </Typography>
       </a>
     </li>

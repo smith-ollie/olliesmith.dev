@@ -3,10 +3,7 @@ import clsx from "clsx";
 
 const typography = cva("typography", {
   variants: {
-    variant: {
-      heading: ["font-Kanit"],
-      body: ["font-Poppins"],
-    },
+    variant: { heading: ["font-Kanit"], body: ["font-Poppins"] },
     size: {
       "x-small": ["text-xs"],
       small: ["text-sm"],
@@ -15,31 +12,12 @@ const typography = cva("typography", {
     },
   },
   compoundVariants: [
-    {
-      variant: "heading",
-      size: "medium",
-      className: "!text-4xl",
-    },
-    {
-      variant: "heading",
-      size: "large",
-      className: "md:!text-6xl !text-5xl",
-    },
-    {
-      variant: "heading",
-      size: "small",
-      className: "!text-2xl",
-    },
-    {
-      variant: "heading",
-      size: "x-small",
-      className: "!text-xl",
-    },
+    { variant: "heading", size: "medium", className: "!text-4xl" },
+    { variant: "heading", size: "large", className: "md:!text-6xl !text-5xl" },
+    { variant: "heading", size: "small", className: "!text-2xl" },
+    { variant: "heading", size: "x-small", className: "!text-xl" },
   ],
-  defaultVariants: {
-    variant: "body",
-    size: "medium",
-  },
+  defaultVariants: { variant: "body", size: "medium" },
 });
 
 export interface TypographyProps

@@ -9,4 +9,4 @@ tech:
   - RTK Query
 ---
 
-I'm currently working as part of a cross-cutting engineering team at Engine.
+I'm currently working as part of a front-end engineering team at Engine.

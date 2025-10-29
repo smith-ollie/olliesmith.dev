@@ -7,6 +7,7 @@ import Page from "../../components/page.astro";
 import { getCollection } from "astro:content";
 import HeroWrapper from "../../components/hero-wrapper.astro";
 import Project from "../../components/project.astro";
+import Typography from "../../components/typography/typography";
 
 const projects = await getCollection("projects").then((projects) =>
   projects.sort(
@@ -18,6 +19,11 @@ const projects = await getCollection("projects").then((projects) =>
 <Layout title="Projects">
   <Page>
     <HeroWrapper />
+    <header class="@[1050px]:px-18 self-start px-6">
+      <Typography variant="heading" size="medium" className="font-bold" as="h2">
+        Projects
+      </Typography>
+    </header>
     <div class="py-5">
       {
         projects.map((project, index) => {
